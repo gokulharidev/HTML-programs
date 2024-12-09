@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black; /* Black background */
+            color: white; /* Default text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ccc;
+        }
+      
+      
+        /* Styling for the backward link */
+        .backward {
+            text-align: start;
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        .backward a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            list-style: none;
+        }
+        .backward ul {
+      list-style: none; /* Removes the bullet points */
+      padding: 0; /* Removes default padding */
+      margin: 0; /* Removes default margin */
+      }
+
+
+        .backward a:hover {
+            color: rgb(102, 102, 102);
+        }
+
+        /* Styling for the title and image grid */
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .image-grid {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .image-box {
+            position: relative;
+            width: 330px;
+            height: 430px;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 90%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .image-grid :hover {
+            transform: scale(1.09);
+            transition: transform 0.5s;
+            z-index: 10;
+        }
+
+        /* Styling for the board of studies section */
+        #Board-of-studies {
+            margin-top: 30px;
+            font-size: 44px;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .link-container {
+            display: inline-block;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            color: white;
+            margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        footer h6{
+            margin-bottom: 5px;
+            font-size: 10px;
+            font-family: georgia;
+        }
+
+        footer h4 {
+            font-size: 10px;
+            color: #ccc;
+            font-family: georgia;
+            
+        }
+        .logo img {
+         height: 90px;
+          width: 90px; 
+          float: left; 
+          margin-right:1000px;
+          margin-top: 0.7px;
+
+        }
+        .left { 
+          flex: 1; 
+          display: flex; 
+          align-items: center; 
+          justify-content: flex-end; 
+        } 
+        .left h1 { 
+          font-size: 60px; 
+          text-align: right; 
+        }
+         .right { 
+          flex: 1; 
+          padding: 20px; 
+        } 
+        .right h2 { 
+          font-size: 36px; 
+          margin-bottom: 20px; 
+        }
+         .right p {
+           font-size:18px; 
+           line-height: 1.5;
+           }
+           .container { display: flex; padding: 20px;}
+           .content { display: flex;  width: 100%; justify-content: space-between; }/* Distributes space evenly between items */
+           .separator { 
+            width: 0.5px; 
+            background-color: #ddd; 
+            height: auto; 
+            margin: 0 20px;
+          }
+          hr {
+            border: 0.5;
+            border-color: #000000;
+            margin-top: 100px;
+            margin-bottom: 60px;
+            width: 600px;
+          }
+          .copyright {
+            bottom: 10px;
+            right: 10px;
+            position: fixed;
+            padding: 10px;
+            font-size: 6px;
+            
+          }
+          .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+          }
+          .contain1{ display: flex; gap: 20px; /* Space between boxes */ justify-content: center; /* Center align the boxes */ }
+          .box { 
+            display: block;
+            width: 150px; 
+            height: 30px; 
+            background-color: #000000; 
+             color: white; 
+            padding: 30px; 
+            margin: 30px; 
+             border: 2px solid #333; 
+             border-radius: 80px; 
+             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+            text-align: center;
+            justify-content: center;
+          
+          }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <img src="logo.png">
+          </div>
+            <ul class="nav-links">
+                <li><a href="#Programme">Programme</a></li>
+                <li><a href="#Events">Events</a></li>
+                <li><a href="#Syllabus">Syllabus</a></li>
+                <li><a href="#Fee">Fee</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="backward">
+      <ul>
+          <br><li><a href="#back"> < back </a></li>
+      </ul>
+  </div>
+    <div class="container"> 
+       <div class="content"> <div class="left"> <h1>Department of Computer Applications</h1> </div>
+       <div class="separator"></div> 
+       <div class="right"> 
+          <h2>About</h2> 
+          <p>Bachelor of Computer Applications (BCA) Programme was introduced in the academic year 2000 - 2001 with an intake of 40 students. The strength has been increased to 60. An additional section in BCA was introduced in the academic year 2007 - 2008 with an intake of 50 students now it is also increased to 60. The Department offers job-oriented courses on various software for the benefit of students. Conducting seminars on various topics not only expands our students’ knowledge and talent but also the students of outside colleges. Through our department association FOBITS, seminars and workshops are organized regularly to help students update their knowledge about the latest developments.</p> 
+        </div> 
+      </div> 
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    
+    <br>
+    <br>
+    
+    <section class="image-grid">
+        <a href="page1.html" class="image-box">
+            <img src="achie.jpg" alt="Description of Image 1">
+            <div class="overlay">Achievements</div>
+        </a>
+        <a href="page2.html" class="image-box">
+            <img src="facult.jpg" alt="Description of Image 2">
+            <div class="overlay">Member of faculty</div>
+        </a>
+        <a href="page3.html" class="image-box">
+            <img src="facult.jpg" alt="Description of Image 3">
+            <div class="overlay">Facilities</div>
+        </a>
+        <a href="page3.html" class="image-box">
+            <img src="achie.jpg" alt="Description of Image 4">
+            <div class="overlay">OBE</div>
+        </a>
+    </section>
+
+    <hr>
+
+    <section id="Board-of-studies">
+      <div class="center"><h4> Board of Studies</h4>
+        
+        <div class="link-container">
+        <div class="contain1">
+        <div class="box">
+            <a href="#link1">BOS</a>
+          </div>
+          <div class="box">
+            <a href="#link2">Minutes</a>
+          </div>
+          <div class="box">
+            <a href="#link3">Meetings</a>
+          </div>
+          
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <h4>Contact: Principal@kongunaducollege.ac.in</h4>
+        <div class="copyright"><h6>Designed by Gokulhari</h6></div>
+    </footer>
+</body>
+</html>
